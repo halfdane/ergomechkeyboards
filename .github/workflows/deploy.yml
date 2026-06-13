@@ -9,12 +9,8 @@ name: Build & Deploy Deck
 on:
   push:
     branches: [main]
-    paths:
-      - slides.md
-      - assets/**
-      - css/**
-      - reveal-md.json
-      - reveal.json
+    paths-ignore:
+      - docs/**
   workflow_dispatch:
 
 permissions:
