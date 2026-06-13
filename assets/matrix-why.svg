@@ -61,5 +61,5 @@
   <text x="750" y="392" text-anchor="middle" fill="#93a1a1" font-size="18">Controller</text>
   <g class="row"><path d="M620 140 C 600 340, 670 350, 695 360"/></g>
   <g class="col"><path d="M840 320 C 850 345, 810 352, 800 360"/></g>
-  <text x="750" y="450" text-anchor="middle" class="lbl" fill="#859900">3+3 = 6 Pins für 9 Tasten · skaliert super</text>
+  <text x="750" y="450" text-anchor="middle" class="lbl" fill="#859900">9 Tasten → 6 Pins. 36 Tasten → 12 Pins.</text>
 </svg>
