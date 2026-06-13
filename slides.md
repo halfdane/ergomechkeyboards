@@ -239,36 +239,6 @@ Spalten statt einem Pin pro Taste.
 
 <!-- .slide: data-background="#002b36" -->
 
-## Matrix-Trick: Dioden ⚡
-
-<div class="cols">
-<div>
-
-- Mehrere Tasten gleichzeitig => **Phantom-Anschläge** (Ghosting)
-- Strom nimmt "Abkürzungen" durchs Gitter
-- **Eine Diode pro Taste** = Einbahnstraße
-- Ergebnis: **N-Key-Rollover**, jeder Anschlag zählt
-
-</div>
-<div>
-
-<img src="assets/matrix-diodes.svg" alt="Dioden gegen Ghosting" height="340">
-
-</div>
-</div>
-
-Note:
-Ein Gitter hat aber eine Tücke: Drückt man mehrere Tasten gleichzeitig, kann der
-Strom unerwartete Wege durchs Gitter nehmen und der Controller "sieht" eine
-vierte, nie gedrückte Taste - das nennt man Ghosting. Die Lösung sind Dioden:
-ein winziges Bauteil pro Taste, das Strom nur in eine Richtung lässt. Damit kann
-man beliebig viele Tasten gleichzeitig drücken - das ist N-Key-Rollover. Genau
-diese Dioden lötet man beim Selbstbau Stück für Stück ein.
-
----
-
-<!-- .slide: data-background="#002b36" -->
-
 ## Mechanische Switches 101 🔧
 
 <div class="cols">
