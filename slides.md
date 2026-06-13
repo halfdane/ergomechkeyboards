@@ -143,7 +143,7 @@ Tasten nutzen, statt alles dem schwachen kleinen Finger aufzubürden.
 - Versetzte Reihen => Finger gehen im **Zickzack**
 - Ständig die **Grundreihe verlassen**
 - Lange Wege = mehr Arbeit pro Anschlag
-- Der Zeigefinger macht den halben Job
+- Der kleiner Finger macht den halben Job
 
 </div>
 <div>
@@ -156,7 +156,7 @@ Tasten nutzen, statt alles dem schwachen kleinen Finger aufzubürden.
 Note:
 Drittes Problem: die Wege, die die Finger zurücklegen. Durch den seitlichen
 Reihenversatz müssen Finger schräg über die Tastatur wandern und immer wieder
-die Grundreihe verlassen. Viel Bewegung, viel Belastung - und der Zeigefinger
+die Grundreihe verlassen. Viel Bewegung, viel Belastung: der kleine Finger
 ist hoffnungslos überlastet und die Schultern müssen das Gewicht der 
 Arme dabei tragen. 
 
