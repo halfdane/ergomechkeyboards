@@ -1,0 +1,13 @@
+# static export output
+_site/
+_static/
+
+# generated PDFs
+*.pdf
+
+# direnv / nix
+.direnv/
+
+# puppeteer / node caches (if ever used)
+.cache/
+node_modules/

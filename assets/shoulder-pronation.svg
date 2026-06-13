@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- Top-down view of shoulders/arms.
+       Left: traditional - elbows tucked in, forearms pronated (palms forced flat/down).
+       Right: split + tenting - shoulders open, forearms半 rotated to neutral. -->
+  <style>
+    .lbl{fill:#93a1a1;font-size:23px;}
+    .torso{fill:#073642;stroke:#586e75;stroke-width:2;}
+    .armbad{stroke:#dc322f;stroke-width:16;stroke-linecap:round;fill:none;}
+    .armok{stroke:#859900;stroke-width:16;stroke-linecap:round;fill:none;}
+    .kbd{fill:#0d4450;stroke:#2aa198;stroke-width:2;}
+  </style>
+
+  <line x1="500" y1="30" x2="500" y2="500" stroke="#073642" stroke-width="2" stroke-dasharray="6 8"/>
+
+  <!-- ===== LEFT traditional ===== -->
+  <text x="250" y="55" text-anchor="middle" class="lbl" fill="#dc322f" font-weight="700">Traditionell</text>
+  <!-- head -->
+  <circle cx="250" cy="110" r="34" class="torso"/>
+  <!-- shoulders -->
+  <rect x="150" y="150" width="200" height="46" rx="23" class="torso"/>
+  <!-- arms pulled inward to a narrow keyboard -->
+  <path class="armbad" d="M175 185 C 200 250, 220 300, 250 330"/>
+  <path class="armbad" d="M325 185 C 300 250, 280 300, 250 330"/>
+  <!-- narrow flat keyboard -->
+  <rect x="170" y="330" width="160" height="70" rx="8" class="kbd"/>
+  <!-- pronation arrows (palms forced down) -->
+  <g stroke="#cb4b16" stroke-width="3" fill="none">
+    <path d="M205 300 a18 18 0 1 0 0.1 0"/>
+    <polygon points="205,282 213,294 197,294" fill="#cb4b16" stroke="none"/>
+    <path d="M295 300 a18 18 0 1 1 -0.1 0"/>
+    <polygon points="295,282 287,294 303,294" fill="#cb4b16" stroke="none"/>
+  </g>
+  <text x="250" y="450" text-anchor="middle" class="lbl">Schultern eingedreht ·</text>
+  <text x="250" y="480" text-anchor="middle" class="lbl">Unterarme proniert (Handfläche nach unten)</text>
+
+  <!-- ===== RIGHT split + tenting ===== -->
+  <text x="750" y="55" text-anchor="middle" class="lbl" fill="#859900" font-weight="700">Split + Tenting</text>
+  <circle cx="750" cy="110" r="34" class="torso"/>
+  <rect x="650" y="150" width="200" height="46" rx="23" class="torso"/>
+  <!-- arms straight out to two separated halves -->
+  <path class="armok" d="M675 185 C 660 250, 655 300, 660 335"/>
+  <path class="armok" d="M825 185 C 840 250, 845 300, 840 335"/>
+  <!-- two tented halves (shown angled) -->
+  <g class="kbd">
+    <polygon points="600,400 685,400 670,340 615,340"/>
+    <polygon points="900,400 815,400 830,340 885,340"/>
+  </g>
+  <!-- neutral handshake arrows -->
+  <g stroke="#2aa198" stroke-width="3" fill="none">
+    <path d="M650 305 a16 16 0 1 0 0.1 0"/>
+    <polygon points="650,289 642,301 658,301" fill="#2aa198" stroke="none"/>
+    <path d="M850 305 a16 16 0 1 1 -0.1 0"/>
+    <polygon points="850,289 858,301 842,301" fill="#2aa198" stroke="none"/>
+  </g>
+  <text x="750" y="450" text-anchor="middle" class="lbl">Schultern offen ·</text>
+  <text x="750" y="480" text-anchor="middle" class="lbl">Unterarme Richtung „Handschlag“</text>
+</svg>

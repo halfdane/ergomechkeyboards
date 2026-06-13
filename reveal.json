@@ -1,0 +1,12 @@
+{
+  "controls": true,
+  "progress": true,
+  "slideNumber": "c/t",
+  "hash": true,
+  "transition": "slide",
+  "transitionSpeed": "fast",
+  "center": true,
+  "width": 1280,
+  "height": 720,
+  "margin": 0.06
+}
