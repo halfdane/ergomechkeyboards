@@ -11,7 +11,7 @@ revealOptions:
 
 ## Deine Handgelenke verdienen Besseres
 
-<p class="subtitle">Eine Reise von "Autsch" zu "Ahhh" in 12 Folien</p>
+<p class="subtitle">Eine Reise von "Autsch" zu "Ahhh" in 13 Folien</p>
 
 <img src="assets/hero.svg" alt="Zwei Tastaturhälften" height="320">
 
@@ -196,14 +196,99 @@ Folie.
 
 ## Die Magie der Layer 🪄
 
-<img src="assets/layers.svg" alt="Tasten-Layer übereinander" height="370">
+<div class="cols">
+<div>
+
+- Eine Taste = **viele Zeichen**, je nach Ebene
+- **Shift** war schon immer ein Layer - kennen wir längst
+- Daumen hält Ebene => Zahlen, Pfeile, Symbole **unter den Fingern**
+- Aber: **wer** legt fest, was jede Taste tut?
+
+</div>
+<div>
+
+<img src="assets/layers.svg" alt="Tasten-Layer übereinander" height="330">
+
+</div>
+</div>
+
+<p class="callout">👉 Die Antwort: die Firmware - nächste Folie!</p>
 
 Note:
 Die Antwort heißt Layer - Ebenen. Eine physische Taste kann viele Zeichen
 bedeuten, je nachdem welche Ebene gerade aktiv ist. Genau wie Shift schon immer
 ein zweites Layer war: Wir kennen das also längst. Ein Daumen hält eine
 Ebenen-Taste, und plötzlich liegen Zahlen, Pfeile oder Symbole direkt unter den
-Fingern - ganz ohne die Hand zu bewegen.
+Fingern - ganz ohne die Hand zu bewegen. Aber wer entscheidet eigentlich, was
+auf welcher Ebene liegt? Das macht die Firmware - der nächste Punkt.
+
+---
+
+<!-- .slide: data-background="#002b36" -->
+
+## QMK vs. ZMK ⚙️
+
+<img src="assets/firmware-qmk-zmk.svg" alt="Vergleich der Firmware QMK und ZMK" height="380">
+
+Note:
+Die Tastatur hat ein kleines Gehirn - einen Mikrocontroller - und darauf läuft
+die Firmware. Sie übersetzt jeden Tastendruck in Zeichen und kümmert sich um
+Layer, Makros und allerlei Magie. Zwei Projekte dominieren: QMK ist der
+etablierte Klassiker mit riesiger Hardware-Liste und Community, aber meist
+kabelgebunden und in C konfiguriert. ZMK ist der moderne Herausforderer: von
+Grund auf für Bluetooth und kabellos gebaut, extrem stromsparend, kann mehrere
+Geräte gleichzeitig - und ich bin ehrlich: ZMK ist mein Favorit. Die Config
+schreibt man in Devicetree, und gebaut wird bequem in der Cloud per
+GitHub-Action.
+
+---
+
+<!-- .slide: data-background="#002b36" -->
+
+## ZMK: Layer als Code 📡
+
+<div class="cols">
+<div>
+
+- Keymap ist eine **Textdatei**
+- Pro Layer eine Liste von Tasten
+- `&kp A`: Sendet Keypress 'A'
+- `&mo 1`: Daumen hält => und `num_layer` wird aktiv
+- Push, GitHub-Workflow baut => `.uf2` aufs Board ziehen => profit!
+
+</div>
+<div>
+
+```dts
+/ {
+  keymap {
+    base_layer {
+      bindings = <
+        &kp A &kp S &kp D &kp F
+        &mo 1 &kp SPACE
+      >;
+    };
+    num_layer {
+      bindings = <
+        &kp N1 &kp N2 &kp N3 &kp N4
+        &trans &kp ENTER
+      >;
+    };
+  };
+};
+```
+
+</div>
+</div>
+
+Note:
+So sieht das bei ZMK konkret aus: Die Belegung ist einfach eine Textdatei. Jedes
+Layer ist eine Liste von Tasten - gut lesbar und in Git versionierbar, man sieht
+also jede Änderung. "&kp A" heißt: schicke ein A. "&mo 1" heißt: solange ich
+diese Taste (meist mit dem Daumen) halte, ist Layer 1 aktiv - und schon liefern
+dieselben Tasten Zahlen statt Buchstaben. "&trans" reicht einfach an die Ebene
+darunter durch. Wenn man fertig ist: ab in GitHub schieben, die Cloud baut eine
+Firmware-Datei, die zieht man per USB aufs Board - fertig. Kein Compiler nötig.
 
 ---
 
