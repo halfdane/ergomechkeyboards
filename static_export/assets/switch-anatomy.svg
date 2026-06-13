@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- Cross-section of a mechanical switch: stem, spring, housing, contacts -->
+  <style>
+    .h{fill:#eee8d5;font-size:26px;font-weight:700;}
+    .lbl{fill:#93a1a1;font-size:20px;}
+    .lead{stroke:#586e75;stroke-width:1.6;}
+  </style>
+
+  <text x="380" y="40" text-anchor="middle" class="h">Anatomie eines Switches</text>
+
+  <!-- keycap -->
+  <path d="M250 90 L 510 90 L 480 130 L 280 130 Z" fill="#073642" stroke="#93a1a1" stroke-width="2"/>
+  <text x="380" y="118" text-anchor="middle" fill="#93a1a1" font-size="18">Keycap</text>
+
+  <!-- stem (cross mount) -->
+  <g>
+    <rect x="345" y="135" width="70" height="70" rx="6" fill="#cb4b16" stroke="#eee8d5" stroke-width="2"/>
+    <!-- plus cross cutout -->
+    <rect x="372" y="146" width="16" height="48" fill="#002b36"/>
+    <rect x="356" y="162" width="48" height="16" fill="#002b36"/>
+  </g>
+
+  <!-- upper housing -->
+  <path d="M280 200 L 480 200 L 470 250 L 290 250 Z" fill="#0d4450" stroke="#2aa198" stroke-width="2"/>
+
+  <!-- housing body -->
+  <rect x="270" y="250" width="220" height="180" rx="10" fill="#073642" stroke="#2aa198" stroke-width="2.5"/>
+
+  <!-- spring -->
+  <path d="M380 250 q -30 12 0 24 q 30 12 0 24 q -30 12 0 24 q 30 12 0 24 q -30 12 0 24"
+        fill="none" stroke="#b58900" stroke-width="3.5"/>
+
+  <!-- metal contact leaves -->
+  <path d="M330 300 L 330 400" stroke="#93a1a1" stroke-width="3" fill="none"/>
+  <path d="M430 300 C 410 340, 410 360, 430 400" stroke="#93a1a1" stroke-width="3" fill="none"/>
+
+  <!-- pins out the bottom -->
+  <line x1="320" y1="430" x2="320" y2="470" stroke="#586e75" stroke-width="4"/>
+  <line x1="440" y1="430" x2="440" y2="470" stroke="#586e75" stroke-width="4"/>
+
+  <!-- labels with leader lines -->
+  <g class="lead">
+    <line x1="415" y1="170" x2="600" y2="170"/>
+    <line x1="380" y1="290" x2="600" y2="290"/>
+    <line x1="480" y1="225" x2="600" y2="225"/>
+    <line x1="430" y1="350" x2="600" y2="350"/>
+    <line x1="440" y1="455" x2="600" y2="455"/>
+  </g>
+  <g class="lbl" fill="#eee8d5">
+    <text x="610" y="176">Stem (Farbe = Typ)</text>
+    <text x="610" y="231">Gehäuse (oben)</text>
+    <text x="610" y="296">Feder (Widerstand)</text>
+    <text x="610" y="356">Kontaktbleche</text>
+    <text x="610" y="461">Pins → in die Matrix</text>
+  </g>
+
+  <text x="380" y="520" text-anchor="middle" class="lbl">Stem-Form + Feder bestimmen linear / taktil / clicky</text>
+</svg>

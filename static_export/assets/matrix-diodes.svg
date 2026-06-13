@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- Diodes prevent ghosting in the matrix -->
+  <style>
+    .h{fill:#eee8d5;font-size:28px;font-weight:700;}
+    .lbl{fill:#93a1a1;font-size:21px;}
+    .row{stroke:#b58900;stroke-width:3;fill:none;}
+    .col{stroke:#268bd2;stroke-width:3;fill:none;}
+    .wire{stroke:#586e75;stroke-width:2;fill:none;}
+    .di{fill:#2aa198;stroke:#2aa198;}
+    .ditxt{fill:#2aa198;font-size:16px;}
+  </style>
+
+  <text x="500" y="50" text-anchor="middle" class="h">Dioden = kein „Ghosting“</text>
+
+  <!-- 3x3 matrix with a diode in series with each switch -->
+  <!-- rows -->
+  <g class="row">
+    <line x1="150" y1="130" x2="760" y2="130"/>
+    <line x1="150" y1="250" x2="760" y2="250"/>
+    <line x1="150" y1="370" x2="760" y2="370"/>
+  </g>
+  <text x="120" y="135" class="lbl" fill="#b58900" text-anchor="end">R1</text>
+  <text x="120" y="255" class="lbl" fill="#b58900" text-anchor="end">R2</text>
+  <text x="120" y="375" class="lbl" fill="#b58900" text-anchor="end">R3</text>
+  <!-- cols -->
+  <g class="col">
+    <line x1="250" y1="100" x2="250" y2="430"/>
+    <line x1="450" y1="100" x2="450" y2="430"/>
+    <line x1="650" y1="100" x2="650" y2="430"/>
+  </g>
+  <text x="250" y="90" class="lbl" fill="#268bd2" text-anchor="middle">C1</text>
+  <text x="450" y="90" class="lbl" fill="#268bd2" text-anchor="middle">C2</text>
+  <text x="650" y="90" class="lbl" fill="#268bd2" text-anchor="middle">C3</text>
+
+  <!-- Show ONE zoomed cell on the right as legend -->
+  <g transform="translate(820 150)">
+    <rect x="-60" y="-30" width="160" height="260" rx="12" fill="#073642" stroke="#586e75" stroke-width="1.5"/>
+    <text x="20" y="-44" text-anchor="middle" class="lbl" fill="#eee8d5" font-size="20">eine Zelle</text>
+    <!-- column node top -->
+    <line class="col" x1="20" y1="-20" x2="20" y2="10"/>
+    <text x="44" y="-2" class="lbl" fill="#268bd2" font-size="16">Spalte</text>
+    <!-- switch -->
+    <rect x="0" y="10" width="40" height="40" rx="6" fill="#0a3640" stroke="#93a1a1" stroke-width="1.6"/>
+    <text x="20" y="36" text-anchor="middle" fill="#93a1a1" font-size="15">SW</text>
+    <line class="wire" x1="20" y1="50" x2="20" y2="80"/>
+    <!-- diode -->
+    <polygon class="di" points="0,80 40,80 20,116"/>
+    <line stroke="#2aa198" stroke-width="3" x1="0" y1="116" x2="40" y2="116"/>
+    <text x="64" y="104" class="ditxt">Diode</text>
+    <line class="wire" x1="20" y1="116" x2="20" y2="150"/>
+    <!-- row node bottom -->
+    <line class="row" x1="-10" y1="150" x2="50" y2="150"/>
+    <text x="44" y="172" class="lbl" fill="#b58900" font-size="16">Reihe</text>
+  </g>
+
+  <!-- switches at the other intersections (simple) -->
+  <g fill="#0a3640" stroke="#93a1a1" stroke-width="1.6">
+    <rect x="438" y="118" width="24" height="24" rx="4"/><rect x="638" y="118" width="24" height="24" rx="4"/>
+    <rect x="238" y="238" width="24" height="24" rx="4"/><rect x="438" y="238" width="24" height="24" rx="4"/><rect x="638" y="238" width="24" height="24" rx="4"/>
+    <rect x="238" y="358" width="24" height="24" rx="4"/><rect x="438" y="358" width="24" height="24" rx="4"/><rect x="638" y="358" width="24" height="24" rx="4"/>
+  </g>
+
+  <text x="430" y="480" text-anchor="middle" class="lbl">Ohne Dioden „erfindet“ der Controller bei 3+ Tasten Phantom-Anschläge.</text>
+  <text x="430" y="512" text-anchor="middle" class="lbl" fill="#2aa198">Eine Diode je Taste erzwingt Einbahnstraßen → sauberes N-Key-Rollover.</text>
+</svg>

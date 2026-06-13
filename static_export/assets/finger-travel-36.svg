@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- 36-key column-staggered layout: 3x5 + 3 thumbs per hand, short travel -->
+  <style>
+    .h{fill:#eee8d5;font-size:30px;font-weight:700;}
+    .key{fill:#0a3640;stroke:#586e75;stroke-width:1.2;}
+    .home{fill:#0d3b1e;stroke:#859900;stroke-width:2;}
+    .thumb{fill:#155e2a;stroke:#859900;stroke-width:1.6;}
+    .path{fill:none;stroke:#2aa198;stroke-width:4;stroke-linecap:round;}
+    .lbl{fill:#93a1a1;font-size:22px;}
+  </style>
+
+  <text x="500" y="46" text-anchor="middle" class="h">34/36 Tasten: kurze Wege</text>
+
+  <!-- column stagger: each column shifted vertically to match finger length -->
+  <g>
+    <!-- LEFT hand 3 rows x 5 cols, column stagger offsets: [10,0,-12,-4,2] -->
+    <!-- col1 x120 off10 -->
+    <g class="key"><rect x="120" y="150" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="120" y="206" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="120" y="262" width="50" height="50" rx="8"/></g>
+    <!-- col2 x176 off0 -->
+    <g class="key"><rect x="176" y="140" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="176" y="196" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="176" y="252" width="50" height="50" rx="8"/></g>
+    <!-- col3 x232 off-12 -->
+    <g class="key"><rect x="232" y="128" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="232" y="184" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="232" y="240" width="50" height="50" rx="8"/></g>
+    <!-- col4 x288 off-4 -->
+    <g class="key"><rect x="288" y="136" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="288" y="192" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="288" y="248" width="50" height="50" rx="8"/></g>
+    <!-- col5 x344 off6 -->
+    <g class="key"><rect x="344" y="146" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="344" y="202" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="344" y="258" width="50" height="50" rx="8"/></g>
+    <!-- thumb cluster -->
+    <g class="thumb"><rect x="300" y="330" width="48" height="44" rx="9"/><rect x="352" y="338" width="48" height="44" rx="9"/></g>
+  </g>
+
+  <g transform="translate(536 0)">
+    <!-- RIGHT hand mirrored offsets [6,-4,-12,0,10] -->
+    <g class="key"><rect x="120" y="146" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="120" y="202" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="120" y="258" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="176" y="136" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="176" y="192" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="176" y="248" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="232" y="128" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="232" y="184" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="232" y="240" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="288" y="140" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="288" y="196" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="288" y="252" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="344" y="150" width="50" height="50" rx="8"/></g>
+    <g class="home"><rect x="344" y="206" width="50" height="50" rx="8"/></g>
+    <g class="key"><rect x="344" y="262" width="50" height="50" rx="8"/></g>
+    <g class="thumb"><rect x="64" y="338" width="48" height="44" rx="9"/><rect x="116" y="330" width="48" height="44" rx="9"/></g>
+  </g>
+
+  <!-- short travel arcs: small hops up/down within a column -->
+  <g class="path">
+    <path d="M201 221 L 201 165"/>
+    <path d="M201 221 L 201 277"/>
+    <path d="M257 209 L 257 153"/>
+  </g>
+  <g fill="#b58900">
+    <circle cx="145" cy="231" r="6"/><circle cx="201" cy="221" r="6"/><circle cx="257" cy="209" r="6"/><circle cx="313" cy="217" r="6"/>
+  </g>
+
+  <text x="500" y="430" text-anchor="middle" class="lbl" fill="#859900">Spalten folgen der Fingerlänge · Daumen tragen Layer &amp; Modifier</text>
+  <text x="500" y="468" text-anchor="middle" class="lbl">Finger bleiben quasi auf der Grundreihe</text>
+</svg>

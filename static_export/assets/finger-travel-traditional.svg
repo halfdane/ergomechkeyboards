@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- Traditional row-staggered keyboard with long finger-travel paths from home row -->
+  <style>
+    .h{fill:#eee8d5;font-size:30px;font-weight:700;}
+    .key{fill:#0a3640;stroke:#586e75;stroke-width:1.2;}
+    .home{fill:#0d3b1e;stroke:#859900;stroke-width:2;}
+    .ktxt{fill:#93a1a1;font-size:16px;text-anchor:middle;}
+    .path{fill:none;stroke:#dc322f;stroke-width:4;stroke-linecap:round;stroke-dasharray:2 9;}
+    .lbl{fill:#93a1a1;font-size:22px;}
+  </style>
+
+  <text x="500" y="46" text-anchor="middle" class="h">Traditionell: weite Reisen</text>
+
+  <!-- staggered rows. Each row offset to the right -->
+  <!-- number row y=90, qwerty y=150, home y=210, bottom y=270 -->
+  <g>
+    <!-- row offsets -->
+    <!-- number row -->
+    <g class="key">
+      <rect x="120" y="90" width="50" height="50" rx="7"/><rect x="175" y="90" width="50" height="50" rx="7"/><rect x="230" y="90" width="50" height="50" rx="7"/><rect x="285" y="90" width="50" height="50" rx="7"/><rect x="340" y="90" width="50" height="50" rx="7"/><rect x="395" y="90" width="50" height="50" rx="7"/><rect x="450" y="90" width="50" height="50" rx="7"/><rect x="505" y="90" width="50" height="50" rx="7"/><rect x="560" y="90" width="50" height="50" rx="7"/><rect x="615" y="90" width="50" height="50" rx="7"/>
+    </g>
+    <!-- top letter row, offset +25 -->
+    <g class="key">
+      <rect x="145" y="150" width="50" height="50" rx="7"/><rect x="200" y="150" width="50" height="50" rx="7"/><rect x="255" y="150" width="50" height="50" rx="7"/><rect x="310" y="150" width="50" height="50" rx="7"/><rect x="365" y="150" width="50" height="50" rx="7"/><rect x="420" y="150" width="50" height="50" rx="7"/><rect x="475" y="150" width="50" height="50" rx="7"/><rect x="530" y="150" width="50" height="50" rx="7"/><rect x="585" y="150" width="50" height="50" rx="7"/>
+    </g>
+    <!-- home row, offset +40 -->
+    <g class="home">
+      <rect x="160" y="210" width="50" height="50" rx="7"/><rect x="215" y="210" width="50" height="50" rx="7"/><rect x="270" y="210" width="50" height="50" rx="7"/><rect x="325" y="210" width="50" height="50" rx="7"/><rect x="380" y="210" width="50" height="50" rx="7"/><rect x="435" y="210" width="50" height="50" rx="7"/><rect x="490" y="210" width="50" height="50" rx="7"/><rect x="545" y="210" width="50" height="50" rx="7"/>
+    </g>
+    <!-- bottom row, offset +65 -->
+    <g class="key">
+      <rect x="185" y="270" width="50" height="50" rx="7"/><rect x="240" y="270" width="50" height="50" rx="7"/><rect x="295" y="270" width="50" height="50" rx="7"/><rect x="350" y="270" width="50" height="50" rx="7"/><rect x="405" y="270" width="50" height="50" rx="7"/><rect x="460" y="270" width="50" height="50" rx="7"/><rect x="515" y="270" width="50" height="50" rx="7"/>
+    </g>
+  </g>
+
+  <!-- long travel paths from home keys to far keys -->
+  <!-- index finger reaching to number row and bottom -->
+  <path class="path" d="M405 235 L 440 115"/>   <!-- to a number key -->
+  <path class="path" d="M405 235 L 295 295"/>   <!-- to bottom -->
+  <path class="path" d="M295 235 L 230 115"/>
+  <path class="path" d="M515 235 L 590 115"/>
+  <path class="path" d="M515 235 L 515 295"/>
+  <!-- finger dots at home -->
+  <g fill="#b58900">
+    <circle cx="295" cy="235" r="7"/><circle cx="350" cy="235" r="7"/><circle cx="405" cy="235" r="7"/><circle cx="460" cy="235" r="7"/>
+  </g>
+
+  <text x="500" y="380" text-anchor="middle" class="lbl" fill="#dc322f">Finger müssen ständig die Grundreihe verlassen</text>
+  <text x="500" y="420" text-anchor="middle" class="lbl">Zickzack durch versetzte Reihen · viel Strecke pro Anschlag</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- Layers: one physical key, many meanings via stacked layers -->
+  <style>
+    .h{fill:#eee8d5;font-size:30px;font-weight:700;}
+    .lbl{fill:#93a1a1;font-size:22px;}
+    .ktxt{font-size:20px;text-anchor:middle;fill:#eee8d5;font-weight:700;}
+    .ltag{font-size:20px;font-weight:700;}
+  </style>
+
+  <text x="500" y="46" text-anchor="middle" class="h">36 Tasten, unendlich viele Zeichen</text>
+
+  <!-- stacked layer planes (isometric-ish) -->
+  <g>
+    <!-- Layer 3 symbols (top) -->
+    <g transform="translate(330 110)">
+      <rect x="0" y="0" width="380" height="120" rx="10" fill="#3a2030" stroke="#d33682" stroke-width="2.5" opacity="0.96"/>
+      <text x="20" y="-8" class="ltag" fill="#d33682">Layer 3 · Symbole</text>
+      <g class="ktxt">
+        <rect x="20" y="20" width="46" height="46" rx="7" fill="#5a2742"/><text x="43" y="50">!</text>
+        <rect x="76" y="20" width="46" height="46" rx="7" fill="#5a2742"/><text x="99" y="50">@</text>
+        <rect x="132" y="20" width="46" height="46" rx="7" fill="#5a2742"/><text x="155" y="50">#</text>
+        <rect x="188" y="20" width="46" height="46" rx="7" fill="#5a2742"/><text x="211" y="50">{</text>
+        <rect x="244" y="20" width="46" height="46" rx="7" fill="#5a2742"/><text x="267" y="50">}</text>
+        <rect x="300" y="20" width="46" height="46" rx="7" fill="#5a2742"/><text x="323" y="50">~</text>
+      </g>
+    </g>
+    <!-- Layer 2 numbers/nav (middle) -->
+    <g transform="translate(230 200)">
+      <rect x="0" y="0" width="380" height="120" rx="10" fill="#073642" stroke="#2aa198" stroke-width="2.5" opacity="0.96"/>
+      <text x="20" y="-8" class="ltag" fill="#2aa198">Layer 2 · Zahlen &amp; Navigation</text>
+      <g class="ktxt">
+        <rect x="20" y="20" width="46" height="46" rx="7" fill="#0d4450"/><text x="43" y="50">1</text>
+        <rect x="76" y="20" width="46" height="46" rx="7" fill="#0d4450"/><text x="99" y="50">2</text>
+        <rect x="132" y="20" width="46" height="46" rx="7" fill="#0d4450"/><text x="155" y="50">3</text>
+        <rect x="188" y="20" width="46" height="46" rx="7" fill="#0d4450"/><text x="211" y="50">←</text>
+        <rect x="244" y="20" width="46" height="46" rx="7" fill="#0d4450"/><text x="267" y="50">↓</text>
+        <rect x="300" y="20" width="46" height="46" rx="7" fill="#0d4450"/><text x="323" y="50">→</text>
+      </g>
+    </g>
+    <!-- Layer 1 base letters (bottom) -->
+    <g transform="translate(130 290)">
+      <rect x="0" y="0" width="380" height="120" rx="10" fill="#0d3b1e" stroke="#859900" stroke-width="2.5"/>
+      <text x="20" y="-8" class="ltag" fill="#859900">Layer 1 · Buchstaben (Basis)</text>
+      <g class="ktxt">
+        <rect x="20" y="20" width="46" height="46" rx="7" fill="#155e2a"/><text x="43" y="50">a</text>
+        <rect x="76" y="20" width="46" height="46" rx="7" fill="#155e2a"/><text x="99" y="50">s</text>
+        <rect x="132" y="20" width="46" height="46" rx="7" fill="#155e2a"/><text x="155" y="50">d</text>
+        <rect x="188" y="20" width="46" height="46" rx="7" fill="#155e2a"/><text x="211" y="50">f</text>
+        <rect x="244" y="20" width="46" height="46" rx="7" fill="#155e2a"/><text x="267" y="50">g</text>
+        <rect x="300" y="20" width="46" height="46" rx="7" fill="#155e2a"/><text x="323" y="50">h</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- thumb holds layer -->
+  <g transform="translate(720 360)">
+    <rect x="0" y="0" width="200" height="70" rx="12" fill="#073642" stroke="#b58900" stroke-width="2.5"/>
+    <text x="100" y="30" text-anchor="middle" fill="#b58900" font-size="20" font-weight="700">Daumen hält</text>
+    <text x="100" y="56" text-anchor="middle" fill="#eee8d5" font-size="20">→ Ebene wechseln</text>
+  </g>
+
+  <text x="500" y="500" text-anchor="middle" class="lbl">Ein Daumen-Tap blättert durch die Ebenen — wie Shift, nur für alles.</text>
+</svg>

@@ -1,0 +1,178 @@
+/* ===========================================================================
+   Split-Ergo-Tastaturen — custom dark-Solarized skin + quirky touches.
+   Layered on top of reveal.js' (light) `solarized` theme to flip it to dark.
+   Solarized palette:
+     base03 #002b36  base02 #073642  base01 #586e75  base00 #657b83
+     base0  #839496  base1  #93a1a1  base2  #eee8d5  base3  #fdf6e3
+     yellow #b58900  orange #cb4b16  red #dc322f  magenta #d33682
+     violet #6c71c4  blue #268bd2  cyan #2aa198  green #859900
+   =========================================================================== */
+
+:root {
+  --sol-base03: #002b36;
+  --sol-base02: #073642;
+  --sol-base01: #586e75;
+  --sol-base00: #657b83;
+  --sol-base0:  #839496;
+  --sol-base1:  #93a1a1;
+  --sol-base2:  #eee8d5;
+  --sol-base3:  #fdf6e3;
+  --sol-yellow: #b58900;
+  --sol-orange: #cb4b16;
+  --sol-red:    #dc322f;
+  --sol-magenta:#d33682;
+  --sol-violet: #6c71c4;
+  --sol-blue:   #268bd2;
+  --sol-cyan:   #2aa198;
+  --sol-green:  #859900;
+}
+
+/* ---- Flip background + base text to the dark Solarized variant ---- */
+.reveal-viewport,
+body {
+  background: var(--sol-base03);
+}
+
+.reveal {
+  color: var(--sol-base1);
+  font-family: "Fira Sans", "Segoe UI", system-ui, sans-serif;
+  font-size: 36px;
+}
+
+/* Headings: warm Solarized accents, slightly playful */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  color: var(--sol-base2);
+  font-family: "Fira Sans", "Segoe UI", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  line-height: 1.1;
+}
+
+.reveal h1 { font-size: 2.6em; }
+
+.reveal h1 { color: var(--sol-cyan); }
+.reveal h2 { color: var(--sol-yellow); }
+.reveal h3 { color: var(--sol-orange); }
+
+.reveal a {
+  color: var(--sol-blue);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--sol-blue);
+}
+.reveal a:hover { color: var(--sol-cyan); }
+
+.reveal strong { color: var(--sol-base2); }
+.reveal em { color: var(--sol-cyan); font-style: normal; }
+
+/* Bullet lists: a touch tighter and friendlier */
+.reveal ul { list-style: none; margin-left: 0; }
+.reveal ul li {
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: 0.35em;
+  line-height: 1.35;
+}
+.reveal ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--sol-green);
+}
+
+.reveal blockquote {
+  background: var(--sol-base02);
+  color: var(--sol-base1);
+  border-left: 6px solid var(--sol-magenta);
+  box-shadow: none;
+  width: auto;
+  font-style: normal;
+}
+
+.reveal code {
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  color: var(--sol-cyan);
+  background: var(--sol-base02);
+  padding: 0.05em 0.35em;
+  border-radius: 4px;
+}
+
+/* Slide images / SVGs: clean, no heavy frame */
+.reveal section img,
+.reveal section svg {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  max-height: 60vh;
+}
+
+/* Progress bar + controls in an accent colour */
+.reveal .progress { color: var(--sol-magenta); height: 4px; }
+.reveal .controls { color: var(--sol-base01); }
+.reveal .slide-number {
+  background: transparent;
+  color: var(--sol-base01);
+  font-size: 16px;
+}
+
+/* ---- Reusable helper classes used in slides.md ---- */
+
+/* Quirky subtitle on the title slide */
+.subtitle {
+  color: var(--sol-base0);
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+/* Big "try it" / callout box */
+.callout {
+  display: inline-block;
+  margin-top: 0.4em;
+  padding: 0.5em 1em;
+  background: var(--sol-base02);
+  border: 2px dashed var(--sol-orange);
+  border-radius: 12px;
+  color: var(--sol-base2);
+  font-size: 0.85em;
+  transform: rotate(-1.2deg);
+}
+
+/* "Wanted poster" framing for the villain slide */
+.wanted {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  background: var(--sol-base02);
+  border: 4px double var(--sol-yellow);
+  border-radius: 6px;
+  color: var(--sol-yellow);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Two-column layout helper: wrap content in <div class="cols"> */
+.cols {
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  justify-content: center;
+}
+.cols > * { flex: 1; min-width: 0; }
+
+/* Small, muted footnote line */
+.fineprint {
+  color: var(--sol-base01);
+  font-size: 0.55em;
+}
+
+/* Emphasis colour utility classes */
+.c-red { color: var(--sol-red); }
+.c-green { color: var(--sol-green); }
+.c-blue { color: var(--sol-blue); }
+.c-orange { color: var(--sol-orange); }
+.c-cyan { color: var(--sol-cyan); }
+.c-yellow { color: var(--sol-yellow); }

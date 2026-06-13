@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- Ulnar deviation: forearm + hand seen from above.
+       Left = traditional (hand twists toward pinky); Right = split (straight). -->
+  <style>
+    .lbl{fill:#93a1a1;font-size:24px;}
+    .bone{fill:#073642;stroke:#586e75;stroke-width:2;}
+    .ok{fill:#0d3b1e;stroke:#859900;stroke-width:2;}
+    .bad{fill:#3a1414;stroke:#dc322f;stroke-width:2;}
+  </style>
+
+  <!-- divider -->
+  <line x1="500" y1="40" x2="500" y2="480" stroke="#073642" stroke-width="2" stroke-dasharray="6 8"/>
+
+  <!-- ===== LEFT: traditional, deviated ===== -->
+  <text x="250" y="60" text-anchor="middle" class="lbl" fill="#dc322f" font-weight="700">Traditionell</text>
+  <!-- forearm -->
+  <rect x="200" y="120" width="100" height="200" rx="40" class="bone"/>
+  <!-- hand, rotated outward (ulnar) -->
+  <g transform="translate(250 130) rotate(22)">
+    <rect x="-55" y="-130" width="110" height="150" rx="30" class="bad"/>
+    <!-- fingers -->
+    <g class="bad">
+      <rect x="-50" y="-180" width="20" height="60" rx="9"/>
+      <rect x="-25" y="-190" width="20" height="70" rx="9"/>
+      <rect x="0" y="-188" width="20" height="68" rx="9"/>
+      <rect x="25" y="-176" width="20" height="58" rx="9"/>
+    </g>
+  </g>
+  <!-- angle marker -->
+  <g stroke="#dc322f" stroke-width="3" fill="none">
+    <line x1="250" y1="120" x2="250" y2="0"/>
+    <line x1="250" y1="120" x2="180" y2="10"/>
+    <path d="M250 70 a50 50 0 0 0 -28 -45" />
+  </g>
+  <text x="190" y="95" class="lbl" fill="#dc322f" font-size="22">~20°</text>
+  <text x="250" y="500" text-anchor="middle" class="lbl">rechte Hand knickt Richtung kleinem Finger</text>
+
+  <!-- ===== RIGHT: split, neutral ===== -->
+  <text x="750" y="60" text-anchor="middle" class="lbl" fill="#859900" font-weight="700">Split</text>
+  <rect x="700" y="120" width="100" height="200" rx="40" class="bone"/>
+  <g transform="translate(750 130)">
+    <rect x="-55" y="-130" width="110" height="150" rx="30" class="ok"/>
+    <g class="ok">
+      <rect x="-50" y="-180" width="20" height="60" rx="9"/>
+      <rect x="-25" y="-188" width="20" height="68" rx="9"/>
+      <rect x="0" y="-188" width="20" height="68" rx="9"/>
+      <rect x="25" y="-178" width="20" height="58" rx="9"/>
+    </g>
+  </g>
+  <line x1="750" y1="120" x2="750" y2="0" stroke="#859900" stroke-width="3"/>
+  <text x="765" y="40" class="lbl" fill="#859900" font-size="22">0° ✓</text>
+  <text x="750" y="500" text-anchor="middle" class="lbl">Unterarm &amp; Hand in einer Linie</text>
+</svg>

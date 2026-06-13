@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- Force-travel curves: linear vs tactile vs clicky -->
+  <style>
+    .h{fill:#eee8d5;font-size:28px;font-weight:700;}
+    .axis{stroke:#586e75;stroke-width:2;}
+    .axtxt{fill:#93a1a1;font-size:18px;}
+    .lbl{fill:#93a1a1;font-size:20px;}
+    .grid{stroke:#073642;stroke-width:1;}
+  </style>
+
+  <text x="500" y="46" text-anchor="middle" class="h">Kraft-Weg-Kurven: das Gefühl in einem Bild</text>
+
+  <!-- chart area: x travel (down), y force. Plot box 120,90 -> 880,360 -->
+  <g>
+    <!-- grid -->
+    <g class="grid">
+      <line x1="120" y1="140" x2="880" y2="140"/>
+      <line x1="120" y1="200" x2="880" y2="200"/>
+      <line x1="120" y1="260" x2="880" y2="260"/>
+      <line x1="120" y1="320" x2="880" y2="320"/>
+    </g>
+    <!-- axes -->
+    <line class="axis" x1="120" y1="90" x2="120" y2="370"/>
+    <line class="axis" x1="120" y1="370" x2="900" y2="370"/>
+    <text x="40" y="160" class="axtxt" transform="rotate(-90 40 230)">Kraft →</text>
+    <text x="500" y="402" text-anchor="middle" class="axtxt">Weg nach unten (Travel) →</text>
+    <text x="120" y="80" text-anchor="middle" class="axtxt" fill="#586e75">↑</text>
+  </g>
+
+  <!-- LINEAR: smooth rising line -->
+  <path d="M120 350 L 880 210" fill="none" stroke="#268bd2" stroke-width="4"/>
+  <!-- TACTILE: bump then dip then rise -->
+  <path d="M120 350 C 280 250, 320 210, 400 235 C 470 255, 520 250, 880 200"
+        fill="none" stroke="#859900" stroke-width="4"/>
+  <!-- CLICKY: sharp bump with a step (click) -->
+  <path d="M120 350 C 270 250, 300 190, 380 190 L 380 250 C 460 250, 540 250, 880 195"
+        fill="none" stroke="#cb4b16" stroke-width="4"/>
+  <!-- click marker -->
+  <circle cx="380" cy="190" r="6" fill="#cb4b16"/>
+  <text x="392" y="180" fill="#cb4b16" font-size="18">*click!*</text>
+
+  <!-- legend -->
+  <g font-size="20">
+    <rect x="640" y="430" width="22" height="6" fill="#268bd2"/>
+    <text x="672" y="438" fill="#93a1a1">linear — gleichmäßig, leise</text>
+    <rect x="640" y="462" width="22" height="6" fill="#859900"/>
+    <text x="672" y="470" fill="#93a1a1">taktil — spürbarer Höcker</text>
+    <rect x="640" y="494" width="22" height="6" fill="#cb4b16"/>
+    <text x="672" y="502" fill="#93a1a1">clicky — Höcker + hörbarer Klick</text>
+  </g>
+
+  <text x="300" y="460" class="lbl" fill="#268bd2">Linear: Gamer-Liebling</text>
+  <text x="300" y="492" class="lbl" fill="#859900">Taktil: Tipp-Feedback</text>
+  <text x="300" y="524" class="lbl" fill="#cb4b16">Clicky: laut &amp; stolz</text>
+</svg>
