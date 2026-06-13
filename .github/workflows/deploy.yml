@@ -1,0 +1,52 @@
+# Rebuild the static reveal.js deck and commit it to docs/
+# so GitHub Pages always serves the latest version.
+#
+# Trigger: every push to main that touches slides, assets, css, or config.
+# Also available as a manual workflow_dispatch.
+
+name: Build & Deploy Deck
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - slides.md
+      - assets/**
+      - css/**
+      - reveal-md.json
+      - reveal.json
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to push the updated docs/
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # fetch full history so the commit below has proper parents
+          fetch-depth: 0
+
+      - name: Install reveal-md
+        run: npm install -g reveal-md@6
+
+      - name: Build static site
+        run: |
+          reveal-md slides.md --static docs --static-dirs=assets,css
+          chmod -R u+w docs
+          # Prevent Jekyll from swallowing _assets/ (and any other _* dirs)
+          touch docs/.nojekyll
+
+      - name: Commit & push docs/
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          # Only commit if something actually changed
+          git diff --cached --quiet || \
+            git commit -m "docs: rebuild static deck [skip ci]"
+          git push

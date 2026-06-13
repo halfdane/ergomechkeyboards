@@ -1,4 +1,4 @@
-# static export output
+# temporary export targets (not docs/)
 _site/
 _static/
 
@@ -11,3 +11,5 @@ _static/
 # puppeteer / node caches (if ever used)
 .cache/
 node_modules/
+
+# docs/ is intentionally tracked (GitHub Pages source)
