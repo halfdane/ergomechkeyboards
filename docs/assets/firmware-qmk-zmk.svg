@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="'Fira Sans','Segoe UI',system-ui,sans-serif">
+  <!-- QMK vs ZMK firmware comparison; ZMK highlighted as the favourite -->
+  <style>
+    .h{fill:#eee8d5;font-size:28px;font-weight:700;}
+    .card-title{font-size:34px;font-weight:800;}
+    .feat{fill:#93a1a1;font-size:21px;}
+    .tag{fill:#586e75;font-size:18px;}
+    .pin{fill:#b58900;font-size:22px;}
+  </style>
+
+  <text x="500" y="46" text-anchor="middle" class="h">Das Gehirn: die Firmware</text>
+  <text x="500" y="78" text-anchor="middle" class="tag">übersetzt Tastendruck → Zeichen, Layer, Makros, Combos …</text>
+
+  <!-- ===== QMK card ===== -->
+  <g transform="translate(70 110)">
+    <rect x="0" y="0" width="380" height="360" rx="18" fill="#073642" stroke="#586e75" stroke-width="2.5"/>
+    <text x="30" y="56" class="card-title" fill="#839496">QMK</text>
+    <text x="30" y="86" class="tag">the quantum mechanical keyboard</text>
+    <g class="feat">
+      <text x="30" y="140">⌨️  Riesige Hardware-Liste</text>
+      <text x="30" y="180">🔌  meist <tspan fill="#cb4b16">kabelgebunden</tspan></text>
+      <text x="30" y="220">🛠️  Config in C, kompiliert</text>
+      <text x="30" y="260">🌐  riesige Community</text>
+      <text x="30" y="300">🔋  Bluetooth nur umständlich</text>
+    </g>
+  </g>
+
+  <!-- ===== ZMK card (highlighted) ===== -->
+  <g transform="translate(550 96)">
+    <rect x="0" y="0" width="400" height="388" rx="20" fill="#0d3b1e" stroke="#859900" stroke-width="4"/>
+    <!-- favourite ribbon -->
+    <g transform="translate(300 -14)">
+      <rect x="-10" y="0" width="120" height="40" rx="20" fill="#b58900"/>
+      <text x="50" y="27" text-anchor="middle" fill="#002b36" font-size="20" font-weight="800">Favorit ⭐</text>
+    </g>
+    <text x="30" y="62" class="card-title" fill="#b5e853">ZMK</text>
+    <text x="30" y="92" class="tag">der moderne Wireless-Star</text>
+    <g class="feat" fill="#b6c98a">
+      <text x="30" y="148">📡  <tspan fill="#2aa198" font-weight="700">Bluetooth &amp; Wireless</tspan> first</text>
+      <text x="30" y="188">🔋  extrem stromsparend</text>
+      <text x="30" y="228">🧩  Config in Devicetree</text>
+      <text x="30" y="268">🖐️  bis zu 5 Geräte koppeln</text>
+      <text x="30" y="308">☁️  Build per GitHub-Action</text>
+    </g>
+  </g>
+</svg>
